@@ -1,0 +1,14 @@
+{
+  "name": "fireship-sveltekit",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "forwardPorts": [5173],
+  "postCreateCommand": "npm install",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "mounts": [
+    "source=fireship-node_modules,target=/app/node_modules,type=volume"
+  ]
+}
